@@ -225,8 +225,8 @@
       toPrettyJson: function(jsObj) {
         return bkCoreManager.toPrettyJson(jsObj);
       },
-      httpGet: function(url, data) {
-        return bkCoreManager.httpGet(url, data);
+      httpGet: function(url, data, headers) {
+        return bkCoreManager.httpGet(url, data, headers);
       },
       httpPost: function(url, data) {
         return bkCoreManager.httpPost(url, data);

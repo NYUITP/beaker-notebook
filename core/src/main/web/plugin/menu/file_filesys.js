@@ -35,12 +35,14 @@
     if (new URL(logicalUrl).hostname == window.location.hostname) {
       var loadingUrl = logicalUrl;
       var queryParams = {}
+      var headers = { 'Authorization' : window.bkBunsenHelper.userId() }
     }
     else {
       var loadingUrl = "/beaker/rest/http-proxy/load";
       var queryParams = {url: logicalUrl}
+      var headers = {}
     }
-    bkHelper.httpGet(loadingUrl, queryParams).
+    bkHelper.httpGet(loadingUrl, queryParams, headers).
         success(function(content) {
           deferred.resolve(content);
         }).
