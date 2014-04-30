@@ -22,10 +22,11 @@
   'use strict';
   var module = angular.module('M_menuPlugin', [
     'M_bkUtils',
-    'M_bkHelper'
+    'M_bkHelper',
+    'M_bkBunsenHelper'
   ]);
   module.factory('menuPluginManager', function(
-      $http, bkUtils, bkHelper // bkHelper is used by plugins via eval right now
+      $http, bkUtils, bkHelper, bkBunsenHelper // bkHelper is used by plugins via eval right now
       ) {
     var DEFAULT_PRIORITY = 0;
     var menus = {};
